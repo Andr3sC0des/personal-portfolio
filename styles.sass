@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap')
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
+    
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    scroll-behavior: smooth
+
+$bg-color: #131422
+
+html
+    font-size: 14px
+
+body
+    background: $bg-color
+    font-family: 'Mulish', sans-serif
+
+
+.navbar
+    background: $bg-color
+    position: fixed
+    width: 100%
+    top: 0
+    display: flex
+    justify-content: end
+    z-index: 3
+.menu
+    display: flex
+    &__item
+        list-style-type: none
+    &__anchor
+        font-size: 1.5rem
+        display: block
+        padding: 1.5rem 1rem
+        text-decoration: none
+        color: #fff
+        &:hover
+            background: #1962cf
+.about
+    position: relative
+    height: 100vh
+    z-index: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &::after
+        content: "" 
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: #000
+        opacity: 0.4    
+        z-index: -1
+    &__title
+        color: #fff
+        text-align: center
+        z-index: 2
+        font-size: 4rem
+    &__subtitle
+        color: #fff
+        font-size: 2rem
+        font-weight: 200
+        z-index: 2
+        text-align: center
+    &__image
+        z-index: -1
+        position: absolute
+        top: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+.projects
+    margin-top: 2rem
+    &__title
+        font-size: 3rem
+        color: #fff
+        text-align: center
+    &__card
+        width: 450px
+        border-radius: 0.4rem
+        overflow: hidden
+        &title
+            padding: 1rem
+            color: #fff
+            text-align: center
+            width: 100%
+            font-size: 2rem
+            background: #2e2e2e
+    &__image
+        width: 100%
+        display: block
+        object-fit: cover
+    &__cards
+        margin-top: 2rem
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 4rem
+        flex-wrap: wrap
+    &__button
+        background: #2e2e2e
+        padding: 1rem
+        border-radius: 0.5rem
+        margin-left: auto
+        display: block
+        width: fit-content
+        margin-right: auto
+        margin-top: 2rem
+        text-decoration: none
+        &:hover
+            background: #3b3b3b
+        &> span
+            color: #fff
+            text-decoration: none
+            font-size: 1.5rem
+        &> i
+            color: #fff
+            font-size: 1.5rem
+            margin-left: 1rem
+    
+.contact
+    color: #fff
+    &__title
+        text-align: center
+        font-size: 2rem
+        display: block
+        margin-top: 2rem
+    &__paragraph
+        margin-top: 1rem
+        text-align: center
+        font-size: 1.2rem
+    &__social
+        display: flex
+        gap: 2rem
+        font-size: 1.5rem
+        margin-left: auto
+        margin-right: auto
+        width: fit-content
+        margin-top: 2rem
+    &__brand
+        color: #fff
+        text-decoration: none
+        &:hover
+            color: #098fdf
+
+
+.footer
+    color: #fff
+    padding: 2rem
+    border-top: 3px solid #098fdf
+    margin-top: 2rem
+    &__info
+        font-size: 1.5rem
+        text-align: center
+        display: block
+    &__copyright
+        font-size: 1.5rem
+        margin-top: 1rem
+        text-align: center
+        display: block
+
+@media screen and ( max-width: 720px )
+    .contact
+        &__social
+            flex-direction: column
+
+@media screen and ( max-width: 462px )
+    .about
+        &__title
+            font-size: 2rem
+        &__subtitle
+            font-size: 1.5rem
+    .footer
+        &__info
+            font-size: 1rem
+        &__copyright
+            font-size: 1rem
+    .projects
+        &__card
+            max-width: 95%
+    
